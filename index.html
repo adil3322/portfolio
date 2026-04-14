@@ -182,4 +182,1386 @@ nav.scrolled {
 }
 
 .hero-eyebrow span {
-  font-si
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.hero-name em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-title {
+  font-size: 1.1rem;
+  color: var(--silver);
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-dim);
+  max-width: 480px;
+  line-height: 1.8;
+  margin-bottom: 44px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 36px;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(201,168,76,0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  padding: 14px 36px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  display: flex;
+  gap: 48px;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+
+.stat-item { text-align: center; }
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 6px;
+  display: block;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeUp 1s ease 0.7s both;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ─── SECTION SHARED ─── */
+section {
+  padding: 100px 60px;
+  position: relative;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-label span {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 60px;
+  line-height: 1.15;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ─── ABOUT ─── */
+#about { background: var(--navy2); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-img-wrap {
+  position: relative;
+}
+
+.about-img-box {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Profile photo styles */
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Placeholder shown when no photo */
+.about-placeholder {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(201,168,76,0.15);
+  line-height: 1;
+}
+
+.photo-hint {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(10,15,30,0.85);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.about-frame {
+  position: absolute;
+  top: -12px; right: -12px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.about-text p {
+  color: var(--silver);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  color: var(--silver);
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ─── SKILLS ─── */
+#skills { background: var(--navy); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skill-category {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 32px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.skill-category:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+.skill-category:hover::before { transform: scaleX(1); }
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.skill-category h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--silver);
+}
+
+.skill-pct { color: var(--gold); font-weight: 500; }
+
+.skill-bar {
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  border-radius: 1px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── PROJECTS ─── */
+#projects { background: var(--navy2); }
+
+.projects-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.05);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201,168,76,0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.project-thumb {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.project-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-type {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.15);
+  color: var(--gold);
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.proj-link {
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.proj-link.live { color: var(--gold); }
+.proj-link.code { color: var(--silver); }
+.proj-link:hover { opacity: 0.8; }
+
+/* ─── EXPERIENCE ─── */
+#experience { background: var(--navy); }
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.timeline-item {
+  padding-left: 48px;
+  margin-bottom: 56px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--navy);
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.15);
+}
+
+.timeline-date {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.timeline-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 0.85rem;
+  color: var(--silver);
+  margin-bottom: 14px;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+/* ─── RESUME SECTION ─── */
+#resume { background: var(--navy2); }
+
+.resume-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.resume-preview {
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-preview::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold2), transparent);
+}
+
+.resume-doc-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-doc-icon {
+  width: 48px;
+  height: 60px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.resume-doc-meta strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.resume-doc-meta span {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.resume-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-line {
+  height: 8px;
+  background: rgba(201,168,76,0.06);
+  border-radius: 2px;
+}
+
+.resume-line:nth-child(1) { width: 80%; }
+.resume-line:nth-child(2) { width: 60%; }
+.resume-line:nth-child(3) { width: 90%; }
+.resume-line:nth-child(4) { width: 50%; }
+.resume-line:nth-child(5) { width: 75%; }
+.resume-line:nth-child(6) { width: 40%; }
+
+.resume-actions {
+  padding-top: 28px;
+  display: flex;
+  gap: 12px;
+}
+
+.resume-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.resume-text h3 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.resume-text p {
+  color: var(--silver);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.resume-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.resume-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--silver);
+}
+
+.resume-highlight::before {
+  content: '▸';
+  color: var(--gold);
+  font-size: 0.8rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  background: var(--navy);
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-inner p {
+  color: var(--silver);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact-email {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 48px;
+  transition: opacity 0.2s;
+  word-break: break-all;
+}
+
+.contact-email:hover { opacity: 0.8; }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  border: 1px solid var(--border);
+  color: var(--silver);
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  padding: 28px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* ─── MOBILE NAV ─── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,15,30,0.98);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover { color: var(--gold); }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  section { padding: 70px 24px; }
+  #hero { padding: 120px 24px 200px; }
+
+  .hero-stats { position: static; flex-direction: row; justify-content: flex-start; margin-top: 48px; gap: 36px; }
+  .scroll-indicator { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-img-wrap { max-width: 300px; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .resume-inner { grid-template-columns: 1fr; }
+
+  footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">AA<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#resume" onclick="toggleMenu()">Resume</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span>Full Stack Developer</span>
+    </div>
+    <h1 class="hero-name">
+      Adil<br><em>Alam</em>
+    </h1>
+    <p class="hero-title">Building digital products that matter</p>
+    <p class="hero-desc">
+      I craft clean, scalable web applications with a focus on user experience,
+      performance, and modern architecture. Available for freelance &amp; full-time roles.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5+</span>
+      <span class="stat-label">Technologies</span>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label"><span>Who I Am</span></div>
+  <h2 class="section-title">About <em>Me</em></h2>
+
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-box">
+        <!--
+          ════════════════════════════════════════
+          PHOTO: Replace the src below with your
+          actual photo path, e.g.:
+            src="photo.jpg"
+          or a hosted URL. Remove the placeholder
+          div once the img is set.
+          ════════════════════════════════════════
+        -->
+        <img
+          class="about-photo"
+          src=""
+          alt="Adil Alam"
+          id="profilePhoto"
+          style="display:none;"
+        />
+        <div class="about-placeholder" id="photoPlaceholder">AA</div>
+        <div class="photo-hint" id="photoHint">📷 Add your photo — replace src in img tag</div>
+      </div>
+      <div class="about-frame"></div>
+    </div>
+
+    <div class="about-text reveal">
+      <p>
+        Hello! I'm <strong style="color:var(--gold)">Adil Alam</strong>, a passionate Full Stack Developer
+        with a love for building elegant web solutions. I specialize in creating
+        responsive, high-performance applications from concept to deployment.
+      </p>
+      <p>
+        My journey in web development started with curiosity and grew into a
+        commitment to crafting products that are not just functional, but delightful
+        to use. I believe great software solves real problems beautifully.
+      </p>
+      <p>
+        When I'm not coding, I'm exploring new technologies, contributing to
+        open-source projects on GitHub, and continuously sharpening my skills
+        in modern full-stack development.
+      </p>
+      <div class="about-tags">
+        <span class="tag">HTML / CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Django</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label"><span>Expertise</span></div>
+  <h2 class="section-title">My <em>Skills</em></h2>
+
+  <div class="skills-grid">
+    <div class="skill-category reveal">
+      <span class="skill-icon">🖥️</span>
+      <h3>Frontend</h3>
+      <div class="skill-list">
+        <div class="skill-item">
+          <div class="skill-info"><span>HTML / CSS</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>JavaScript</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>React.js</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>Bootstrap / Tailwind</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category reveal">
+      <span class="skill-icon">⚙️</span>
+      <h3>Backend</h3>
+      <div class="skill-list">
+        <div class="skill-item">
+          <div class="skill-info"><span>Python / Django</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>Node.js / Express</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>REST APIs</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>Firebase</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category reveal">
+      <span class="skill-icon">🛠️</span>
+      <h3>Tools &amp; Others</h3>
+      <div class="skill-list">
+        <div class="skill-item">
+          <div class="skill-info"><span>Git / GitHub</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>SQL / Databases</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>Responsive Design</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>VS Code / Tools</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label"><span>Portfolio</span></div>
+  <h2 class="section-title">Featured <em>Projects</em></h2>
+
+  <div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+
+    <div class="project-card reveal" data-category="fullstack">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#0a1628,#1a3060)">🛒</div>
+      <div class="project-body">
+        <div class="project-type">Full Stack</div>
+        <h3 class="project-name">Django E-Commerce Store</h3>
+        <p class="project-desc">Full-featured online store with admin panel, user authentication, cart, search &amp; filter, dark mode, and Bootstrap UI.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Bootstrap</span>
+          <span class="tech-tag">SQLite</span>
+        </div>
+        <div class="project-links">
+          <a href="https://adil3322.github.io/E-commerce-website" target="_blank" class="proj-link live">↗ Live Demo</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="fullstack">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#0a1e2a,#0a3040)">💬</div>
+      <div class="project-body">
+        <div class="project-type">Full Stack</div>
+        <h3 class="project-name">Firebase Real-Time Chat</h3>
+        <p class="project-desc">Real-time chat application with Firebase auth, message history, online presence indicators, and responsive Tailwind UI.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Tailwind</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link live">↗ Live Demo</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#1a1000,#2d2000)">🌤️</div>
+      <div class="project-body">
+        <div class="project-type">Frontend</div>
+        <h3 class="project-name">Weather Dashboard</h3>
+        <p class="project-desc">5-day weather forecast app with dark mode, animated backgrounds, weather icons, and smart city name validation.</p>
+        <div class="project-tech">
+          <span class="tech-tag">HTML/CSS/JS</span>
+          <span class="tech-tag">OpenWeather API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link live">↗ Live Demo</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="fullstack">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#0f1a0a,#1a3010)">📋</div>
+      <div class="project-body">
+        <div class="project-type">Full Stack</div>
+        <h3 class="project-name">Project Management Tool</h3>
+        <p class="project-desc">Team collaboration tool with task boards, assignment, progress tracking, and deadline management features.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link live">↗ Coming Soon</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="backend">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#1a0a20,#2a1040)">📱</div>
+      <div class="project-body">
+        <div class="project-type">Backend</div>
+        <h3 class="project-name">Social Media Platform</h3>
+        <p class="project-desc">Express.js powered social media backend with user profiles, posts, likes, comments, and follow system.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Express.js</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">REST API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link live">↗ Coming Soon</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#0a1520,#102030)">🧰</div>
+      <div class="project-body">
+        <div class="project-type">Frontend</div>
+        <h3 class="project-name">All-Features Frontend Bundle</h3>
+        <p class="project-desc">Comprehensive web app combining e-commerce UI, local chat, login, dark mode, wishlist, to-do, and Chart.js stats.</p>
+        <div class="project-tech">
+          <span class="tech-tag">HTML/CSS/JS</span>
+          <span class="tech-tag">Chart.js</span>
+          <span class="tech-tag">LocalStorage</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link live">↗ Live Demo</a>
+          <a href="https://github.com/adil3322" target="_blank" class="proj-link code">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label"><span>Journey</span></div>
+  <h2 class="section-title">My <em>Experience</em></h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 — Present</div>
+      <div class="timeline-role">Full Stack Developer</div>
+      <div class="timeline-company">Freelance / Self-Employed</div>
+      <p class="timeline-desc">
+        Building full-stack web applications for clients — from Django e-commerce stores to
+        Firebase real-time apps. Managing entire project lifecycle from design to deployment on GitHub Pages.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2023 — 2024</div>
+      <div class="timeline-role">Frontend Developer</div>
+      <div class="timeline-company">Personal Projects &amp; Open Source</div>
+      <p class="timeline-desc">
+        Developed and shipped 10+ frontend projects including weather dashboards, chat apps,
+        and feature-rich bundles. Maintained GitHub portfolio at github.com/adil3322.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2022 — 2023</div>
+      <div class="timeline-role">Web Development Learner</div>
+      <div class="timeline-company">Self-Taught</div>
+      <p class="timeline-desc">
+        Mastered HTML, CSS, JavaScript fundamentals. Built first projects and started the
+        journey into Python, Django, and modern JavaScript frameworks.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="section-label"><span>Download</span></div>
+  <h2 class="section-title">My <em>Resume</em></h2>
+
+  <div class="resume-inner">
+
+    <div class="resume-preview reveal">
+      <div class="resume-doc-header">
+        <div class="resume-doc-icon">📄</div>
+        <div class="resume-doc-meta">
+          <strong>Adil Alam — Resume</strong>
+          <span>Full Stack Developer · PDF Format</span>
+        </div>
+      </div>
+      <div class="resume-lines">
+        <div class="resume-line"></div>
+        <div class="resume-line"></div>
+        <div class="resume-line"></div>
+        <div class="resume-line"></div>
+        <div class="resume-line"></div>
+        <div class="resume-line"></div>
+      </div>
+      <div class="resume-actions">
+        <!--
+          ════════════════════════════════════════
+          RESUME: Replace href="resume.pdf" with
+          the actual path to your resume file.
+          ════════════════════════════════════════
+        -->
+        <a href="resume.pdf" download="Adil_Alam_Resume.pdf" class="btn-primary">↓ Download PDF</a>
+        <a href="resume.pdf" target="_blank" class="btn-outline">↗ View Online</a>
+      </div>
+    </div>
+
+    <div class="resume-text reveal">
+      <h3>Ready to bring<br><em>value to your team</em></h3>
+      <p>
+        My resume covers my full-stack skill set, project experience, and the
+        technologies I work with every day — from Django and Firebase to Node.js
+        and modern frontend tooling.
+      </p>
+      <div class="resume-highlights">
+        <div class="resume-highlight">Full Stack projects using Django, Node.js &amp; Firebase</div>
+        <div class="resume-highlight">10+ shipped projects on GitHub</div>
+        <div class="resume-highlight">Responsive &amp; mobile-first design approach</div>
+        <div class="resume-highlight">Available for freelance &amp; full-time roles</div>
+        <div class="resume-highlight">Contact: alamadil2234@gmail.com</div>
+      </div>
+      <a href="mailto:alamadil2234@gmail.com" class="btn-primary">📩 Email Me Directly</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center"><span>Let's Connect</span></div>
+  <h2 class="section-title" style="text-align:center;">Get In <em>Touch</em></h2>
+
+  <div class="contact-inner reveal">
+    <p>
+      I'm currently available for freelance projects, full-time roles, and exciting collaborations.
+      If you have a project in mind or just want to say hi — my inbox is always open.
+    </p>
+
+    <a href="mailto:alamadil2234@gmail.com" class="contact-email">alamadil2234@gmail.com</a>
+
+    <div class="social-links">
+      <a href="https://github.com/adil3322" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.3c0 .31.2.68.82.56C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/adilalam" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+      <a href="resume.pdf" download="Adil_Alam_Resume.pdf" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
+        Resume
+      </a>
+    </div>
+
+    <a href="mailto:alamadil2234@gmail.com" class="btn-primary">Send Me an Email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Adil Alam. All rights reserved.</p>
+  <a href="https://github.com/adil3322" target="_blank">github.com/adil3322</a>
+</footer>
+
+<script>
+// NAV scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// Profile photo: show img if src is set, otherwise show placeholder
+(function() {
+  const img = document.getElementById('profilePhoto');
+  const placeholder = document.getElementById('photoPlaceholder');
+  const hint = document.getElementById('photoHint');
+  if (img && img.src && img.src !== window.location.href) {
+    img.style.display = 'block';
+    if (placeholder) placeholder.style.display = 'none';
+    if (hint) hint.style.display = 'none';
+  }
+})();
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+      el.target.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.dataset.w + '%';
+      });
+      observer.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
+
+// Project filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
