@@ -50,14 +50,14 @@ Responsive shopping interface with cart functionality.
 
 ## 📈 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=adil3322E&show_icons=true&theme=tokyonight)
 
 ---
 
 ## 📫 Contact Me
-- Email: your@email.com
-- LinkedIn: https://linkedin.com/in/yourname
-- GitHub: https://github.com/yourusername
+- Email: alamadil2234@gmail.com
+- LinkedIn: https://www.linkedin.com/in/adil-alam-a05339288
+- GitHub: https://github.com/adil3322
 
 ---
 
