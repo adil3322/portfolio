@@ -49,8 +49,9 @@ Responsive shopping interface with cart functionality.
 ---
 
 ## 📈 GitHub Stats
+https://adil3322.github.io/portfolio/
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=adil3322E&show_icons=true&theme=tokyonight)
+
 
 ---
 
