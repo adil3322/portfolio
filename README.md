@@ -66,6 +66,4 @@ https://adil3322.github.io/portfolio/
 I love building beautiful UI and solving real-world problems.
 
 # portfolio
-I am a passionate Frontend Developer skilled in HTML, CSS, and JavaScript. I build responsive and user-friendly web applications with modern UI designs. I have created projects like e-commerce websites, chat apps, and portfolio sites, and I continuously work on improving my skills and learning new technologies.
-
-
+  I am currently pursuing my Bachelor's degree and continuously improving my development skills through personal projects, internships, and hands-on learning. My goal is to become a professional Full Stack Web Developer and contribute to innovative software solutions.
