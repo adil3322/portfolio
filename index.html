@@ -1,4 +1,4 @@
- 
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -837,6 +837,14 @@
     .contact-form{display:grid;gap:10px;max-width:620px;margin:0 auto 24px;text-align:left}.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.25);border-radius:9px;background:rgba(255,255,255,.08);color:#fff;outline:none;font:inherit}.contact-form textarea{min-height:110px;resize:vertical}.contact-form button{border:0;cursor:pointer}
     .floating-contact{position:fixed;right:20px;bottom:20px;z-index:90;width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:#25d366;color:#fff;text-decoration:none;font-size:1.25rem;box-shadow:0 12px 28px rgba(0,0,0,.18)}.back-top{position:fixed;right:20px;bottom:82px;z-index:90;width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:#fff;color:var(--blue);text-decoration:none;opacity:0;pointer-events:none;transition:.2s;box-shadow:var(--shadow)}.back-top.show{opacity:1;pointer-events:auto}
     body.dark-mode{--white:#0f1724;--bg:#0a1220;--ink:#edf5ff;--muted:#a8b8ca;--border:#24364b;--blue-soft:#111f31;--blue-light:#173457} body.dark-mode #navbar{background:rgba(10,18,32,.92)} body.dark-mode .hero-qr-card,body.dark-mode .qr-section,body.dark-mode .project-card,body.dark-mode .skill-category,body.dark-mode .certificate-card,body.dark-mode .achievement-card{background:#101c2b} body.dark-mode .back-top{background:#101c2b;color:#fff}
+    .image-fallback{display:grid;place-items:center;background:linear-gradient(135deg,var(--blue-light),var(--blue-soft));min-height:100%;position:relative}.image-fallback::after{content:"Project Preview";font-family:"Manrope",sans-serif;font-size:.78rem;font-weight:800;color:var(--blue);letter-spacing:.04em}
+    body.dark-mode #about,body.dark-mode #projects,body.dark-mode #experience,body.dark-mode #achievements,body.dark-mode #education,body.dark-mode #internship{background:var(--bg)}
+    body.dark-mode .skill-category,body.dark-mode .project-card,body.dark-mode .certificate-card,body.dark-mode .resume-preview,body.dark-mode .achievement{background:#101c2b;color:var(--ink)}
+    body.dark-mode .filter-btn,body.dark-mode .btn-outline,body.dark-mode .proj-link.code{background:#101c2b;color:var(--ink)}
+    body.dark-mode .mobile-menu{background:rgba(10,18,32,.98)} body.dark-mode .qr-section{background:linear-gradient(135deg,#101c2b,#0f1724)}
+    body.dark-mode .timeline-dot{background:#101c2b}
+    body.dark-mode .stat-item{background:rgba(16,28,43,.9)}
+    body.dark-mode .tech-tag{background:#14263a;border-color:#29435c;color:#b8d0e6}
     .theme-toggle{border:1px solid var(--border);background:var(--blue-soft);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;margin-left:8px}
     .availability-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#27c93f;margin-right:7px;box-shadow:0 0 0 4px rgba(39,201,63,.12)}
     @media(max-width:850px){.hero-grid,.qr-section{grid-template-columns:1fr}.hero-qr-card{max-width:280px}.featured-project{grid-column:span 1}.featured-project .project-thumb{aspect-ratio:16/9}}
@@ -1016,7 +1024,6 @@
 
     <div class="projects-filter">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
       <button class="filter-btn" data-filter="frontend">Frontend</button>
       <button class="filter-btn" data-filter="backend">Backend</button>
     </div>
@@ -1024,102 +1031,92 @@
     <div class="projects-grid" id="projectsGrid">
 
       <article class="project-card reveal featured-project" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/calculator.png" alt="Simple Calculator App preview"></div>
+        <div class="project-thumb"><img src="project-images/calculator.png" alt="Simple Calculator App preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <span class="featured-badge">★ Featured Project</span>
           <div class="project-type">Frontend</div>
           <h3 class="project-name">Simple Calculator App</h3>
           <p class="project-desc">A lightweight calculator with a clean interface for everyday arithmetic, built with vanilla web technologies.</p>
           <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/Simple-calculator-app/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/Simple-calculator-app/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/signup.png" alt="Sign Up Page preview"></div>
+        <div class="project-thumb"><img src="project-images/account-created.jpg" alt="Account Created page preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
-          <h3 class="project-name">Sign Up Page</h3>
-          <p class="project-desc">A responsive registration screen focused on a simple layout, clear form fields and a mobile-friendly experience.</p>
-          <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/sign-up-page/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <h3 class="project-name">Account Created</h3>
+          <p class="project-desc">A clean success screen shown after account creation, giving users clear confirmation that their account was created successfully.</p>
+          <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Responsive UI</span></div>
+          <div class="project-links"><a class="proj-link live" href="https://new-account-created-2.onrender.com" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/weather.png" alt="Weather Dashboard preview"></div>
+        <div class="project-thumb"><img src="project-images/weather.png" alt="Weather Dashboard preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
           <h3 class="project-name">Weather Dashboard</h3>
           <p class="project-desc">A weather dashboard that fetches forecast data, validates city names and presents the information in a responsive interface.</p>
           <div class="project-tech"><span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">OpenWeather API</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/Wheather-dashboard-app/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/Wheather-dashboard-app/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="backend">
-        <div class="project-thumb"><img src="project-images/social-hub.png" alt="Social Media Platform preview"></div>
+        <div class="project-thumb"><img src="project-images/social-hub.png" alt="Social Media Platform preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Backend</div>
           <h3 class="project-name">Social Media Platform</h3>
           <p class="project-desc">A social media project with user profiles, posts and interactions, backed by a Node.js and Express API.</p>
           <div class="project-tech"><span class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span class="tech-tag">REST API</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/mysocialapp/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/mysocialapp/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/profile-card.jpg" alt="Profile Card preview"></div>
+        <div class="project-thumb"><img src="project-images/profile-card.jpg" alt="Profile Card preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
           <h3 class="project-name">Profile Card</h3>
           <p class="project-desc">A compact personal profile component designed to present a person's details and social links in a polished layout.</p>
           <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/profile-card/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/profile-card/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/qr-code.png" alt="QR Code project preview"></div>
+        <div class="project-thumb"><img src="project-images/qr-code.png" alt="QR Code project preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
           <h3 class="project-name">QR Code Tool</h3>
           <p class="project-desc">A simple web tool for generating QR codes from user-provided information through an easy-to-use interface.</p>
           <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">QR API</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/QR-code/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/QR-code/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/account-created.jpg" alt="New Account Created page preview"></div>
-        <div class="project-body">
-          <div class="project-type">Frontend</div>
-          <h3 class="project-name">New Account Created</h3>
-          <p class="project-desc">A clean account-success page that gives users clear confirmation after completing an account creation flow.</p>
-          <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Responsive UI</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://new-account-created-2.onrender.com" target="_blank" rel="noopener">↗ Live Demo</a></div>
-        </div>
-      </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/login.png" alt="Login Page preview"></div>
+        <div class="project-thumb"><img src="project-images/login.png" alt="Login Page preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
           <h3 class="project-name">Login Page</h3>
           <p class="project-desc">A clean authentication interface with a focused layout, responsive styling and a professional blue-and-white visual direction.</p>
           <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">UI Design</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/login-page/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/login-page/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
       <article class="project-card reveal" data-category="frontend">
-        <div class="project-thumb"><img src="project-images/student-manager.jpg" alt="Student Manager preview"></div>
+        <div class="project-thumb"><img src="project-images/student-manager.jpg" alt="Student Manager preview" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');this.style.display='none';"></div>
         <div class="project-body">
           <div class="project-type">Frontend</div>
           <h3 class="project-name">Student Manager</h3>
           <p class="project-desc">A browser-based student management interface for organizing student information through a simple, responsive dashboard.</p>
           <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">CRUD UI</span></div>
-          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/normal/" target="_blank" rel="noopener">↗ Live Demo</a></div>
+          <div class="project-links"><a class="proj-link live" href="https://adil3322.github.io/normal/" target="_blank" rel="noopener noreferrer">↗ Live Demo</a></div>
         </div>
       </article>
 
@@ -1337,12 +1334,12 @@
       <a class="contact-email" href="mailto:alamadil2234@gmail.com">alamadil2234@gmail.com</a>
 
       <div class="social-links">
-        <a class="social-link" href="https://github.com/adil322" target="_blank" rel="noopener">GitHub</a>
-        <a class="social-link" href="https://www.linkedin.com/in/adil-alam-a05339288" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="social-link" href="https://www.instagram.com/_______adil___alam/" target="_blank" rel="noopener">Instagram</a>
-        <a class="social-link" href="https://www.facebook.com/share/1DdoBFvrXF/" target="_blank" rel="noopener">Facebook</a>
-        <a class="social-link" href="https://x.com/adilalam2004" target="_blank" rel="noopener">X / Twitter</a>
-        <a class="social-link" href="https://www.youtube.com/@thevinesworld" target="_blank" rel="noopener">YouTube</a>
+        <a class="social-link" href="https://github.com/adil3322" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="social-link" href="https://www.linkedin.com/in/adil-alam-a05339288" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="social-link" href="https://www.instagram.com/_______adil___alam/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-link" href="https://www.facebook.com/share/1DdoBFvrXF/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="social-link" href="https://x.com/adilalam2004" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+        <a class="social-link" href="https://www.youtube.com/@thevinesworld" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
 
       <a href="mailto:alamadil2234@gmail.com" class="btn-primary">Send Me an Email</a>
@@ -1350,12 +1347,12 @@
     </div>
   </section>
 
-  <a class="floating-contact" href="https://wa.me/919608211167" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◉</a>
+  <a class="floating-contact" href="https://wa.me/919608211167" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">◉</a>
   <a class="back-top" id="backTop" href="#hero" aria-label="Back to top">↑</a>
 
   <footer>
     <p>© 2026 Adil Alam. All rights reserved.</p>
-    <a href="https://github.com/adil322" target="_blank" rel="noopener">github.com/adil322</a>
+    <a href="https://github.com/adil3322" target="_blank" rel="noopener noreferrer">github.com/adil3322</a>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
@@ -1380,7 +1377,10 @@
     });
 
     function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("open");
+      const menu = document.getElementById("mobileMenu");
+      const button = document.querySelector(".hamburger");
+      const open = menu.classList.toggle("open");
+      if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -1406,10 +1406,22 @@
 
         const filter = button.dataset.filter;
 
-        document.querySelectorAll("#projectsGrid .project-card").forEach((card) => {
+        const cards = document.querySelectorAll("#projectsGrid .project-card");
+        let visible = 0;
+        cards.forEach((card) => {
           const show = filter === "all" || card.dataset.category === filter;
           card.style.display = show ? "flex" : "none";
+          if (show) visible++;
         });
+        let empty = document.getElementById("projectsEmpty");
+        if (!empty) {
+          empty = document.createElement("p");
+          empty.id = "projectsEmpty";
+          empty.style.cssText = "grid-column:1/-1;text-align:center;color:var(--muted);padding:30px;font-weight:700;";
+          document.getElementById("projectsGrid").appendChild(empty);
+        }
+        empty.textContent = visible ? "" : "No projects in this category yet.";
+        empty.style.display = visible ? "none" : "block";
       });
     });
   </script>
